@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <div class="container">
+        <%- include('../partials/nav.ejs') %>
+            <h2>Posts</h2>
+            <% if(blogs.length) { %>
+                <ul class="post-container">
+                    <% blogs.forEach(function(blog){ %>
+                        <li class="post-item">
+                            <h3>
+                                <%= blog.name%>
+                            </h3>
+                            <p>
+                                <%= blog.description %>
+                            </p>
+                            <h4>
+                                <%= blog.likes %> <span>likes</span>
+                            </h4>
+                        </li>
+                        <% }); %>
+                </ul>
+                <% } else{ %>
+                    <h2> No posts available...</h2>
+                    <% } %>
+    </div>
+</body>
+</html>

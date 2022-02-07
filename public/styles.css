@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f8f4f4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 930px;
+    margin: 1rem auto;
+    padding: 1rem 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a {
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+ul li a:hover {
+    color: crimson;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.post-container {
+    padding: 0 3rem;
+}
+
+.post-item {
+    margin: 2rem 0;
+}
+
+h4 {
+    color: crimson;
+    font-weight:400;
+}
+
+.post-item h3 {
+    color: #551A8B;
+    font-weight: 600;
+}
+
+P {
+    letter-spacing: 2px;
+    margin: .9rem 0;
+}
+
+h2 {
+    padding: 0 1.5rem;
+    color: crimson;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+.about-container {
+    padding: 4rem 0;
+}
+
+.about-container h2 {
+    text-align: center;
+}
+
+
+.about {
+    padding: 0 1.5rem;
+    margin: 2rem auto;
+    line-height: 1.9;
+    text-align: center;
+    width: 80%;
+}
+
+.form-container {
+    padding: 1.5rem 0;
+}
+
+
+.form-container h2 {
+    text-align: center;
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+label {
+    color: #551A8B;
+    font-weight: 400;
+    display: block;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+
+input {
+    width: 100%;
+    padding: 0.5rem 0;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #551A8B;
+}
+
+textarea {
+    width: 100%;
+    max-width: 468px;
+    height: 120px;
+    max-height: 150px;
+    margin: 2rem 0;
+    padding: 0.5rem;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #551A8B;
+}
+
+button {
+    width: 100%;
+    background: crimson;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}

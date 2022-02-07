@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <div class="container">
+        <%- include('../partials/nav.ejs') %>
+        <div class="form-container">
+            <h2>
+                Create Post
+            </h2>
+
+            <form>
+                <div class="form-item">
+                    <Label>post name</Label>
+                    <input type="text" placeholder="Enter post name">
+                </div>
+
+                <textarea placeholder="Enter post description"></textarea>
+                <button type="submit">Create Post</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
