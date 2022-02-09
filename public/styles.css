@@ -59,7 +59,7 @@ nav li {
 
 h4 {
     color: crimson;
-    font-weight:400;
+    font-weight: 400;
 }
 
 .post-item h3 {
@@ -70,6 +70,8 @@ h4 {
 P {
     letter-spacing: 2px;
     margin: .9rem 0;
+    word-wrap: break-word;
+    line-height: 1.4;
 }
 
 h2 {
@@ -105,7 +107,7 @@ h2 {
     text-align: center;
 }
 
-form {
+.form {
     width: 500px;
     margin: 0 auto;
     padding: 2rem 1rem;
@@ -141,14 +143,23 @@ textarea {
     border: 1px solid #551A8B;
 }
 
-button {
-    width: 100%;
+.btn,
+.delete {
     background: crimson;
-    color: white;
-    padding: 1rem;
     border: none;
+    color: white;
+    cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
     letter-spacing: 1px;
-    cursor: pointer;
+}
+
+.btn {
+    width: 100%;
+    padding: 1rem;
+}
+
+.delete {
+    padding: 0.4rem 1rem;
+    margin: 0;
 }
