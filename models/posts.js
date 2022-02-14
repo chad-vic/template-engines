@@ -9,6 +9,11 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: [true, 'description can not be empty'],
         max: 100,
+    },
+    img:
+    {
+        data: Buffer,
+        contentType: String
     }
 })
 

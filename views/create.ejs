@@ -9,13 +9,19 @@
                 Create Post
             </h2>
 
-            <form action="/post/create" method="POST" class="form">
+            <form action="/post/create" method="POST" class="form" enctype="multipart/form-data">
                 <div class="form-item">
                     <Label>post name</Label>
-                    <input type="text" placeholder="Enter post name" name="input">
+                    <input type="text" placeholder="Enter post name" name="title" class="title" required>
                 </div>
 
-                <textarea placeholder="Enter post description" name="textarea"></textarea>
+                <div class="form-item">
+                    <Label>Upload post image</Label>
+                    <input type="file" name="image" required>
+                </div>
+
+                <textarea placeholder="Enter post description" name="description" required></textarea>
+               
                 <button class="btn" type="submit">Create Post</button>
             </form>
         </div>

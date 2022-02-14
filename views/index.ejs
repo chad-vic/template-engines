@@ -10,6 +10,10 @@
                         <% posts.forEach(function(post){ %>
                             <form action="/delete/post/<%=post._id%>" method="POST">
                                 <li class="post-item">
+                                    <div class="img">
+                                        <img src="data:image/<%=post.img.contentType%>;base64,
+                                                             <%=post.img.data.toString('base64')%>">
+                                    </div>
                                     <h3>
                                         <%= post.title%>
                                     </h3>

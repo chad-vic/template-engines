@@ -1,8 +1,11 @@
 const express = require('express')
 const app = express()
-require('dotenv').config()
+const path = require('path')
+const multer = require('multer');
+const fs = require('fs');
 const connectDB = require('./db/connect')
 const Post = require('./models/posts')
+require('dotenv').config()
 
 app.set('view engine', 'ejs')
 
@@ -10,6 +13,19 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(express.static('public'))
+
+
+//image middleware
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads')
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+});
+
+const upload = multer({ storage });
 
 
 // home page
@@ -34,11 +50,15 @@ app.get('/post/create', (req, res) => {
 
 
 // create post 
-app.post('/post/create', async (req, res) => {
-    const { input: title, textarea: description } = req.body
+app.post('/post/create', upload.single('image'), async (req, res) => {
+    const { title, description } = req.body
     const data = {
         title,
-        description
+        description,
+        img: {
+            data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
+            contentType: 'image/jpg'
+        }
     }
     try {
         await Post.create(data)
